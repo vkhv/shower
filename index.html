@@ -28,7 +28,10 @@
 		<h1>Shower Presentation Engine</h1>
 		<p>Yours Truly, Famous Inc.</p>
 	</header>
-	<section class="slide">
+
+
+
+	<section class="slide little">
 		<h2>at-rule-empty-line-before</h2>
 		<p>Требует пустую строку перед правилом</p>
 
@@ -56,8 +59,9 @@
 
 
 
-	<section class="slide">
-		<h2>at-rule-name-case</h2>
+
+		<section class="slide">
+		<h2>at-rule-name-space-after</h2>
 		<p>Требуется пробел для правил, начинающиеся с '@'</p>
 		<pre class="invalid-pattern"><code class="hljs language-css">@<span class="hljs-keyword">charset</span>"<span class="hljs-keyword">UTF</span>-<span class="hljs-keyword">8</span>";</code></pre>
 
@@ -67,6 +71,188 @@
 
 
 	</section>
+
+	<section class="slide">
+
+		<h2>at-rule-semicolon-newline-after</h2>
+		<p>Новая строка после точки с запятой</p>
+
+		<pre class="invalid-pattern"><code class="hljs language-css">@<span class="hljs-keyword">import</span> url(<span class="hljs-string">"x.css"</span>); @<span class="hljs-keyword">import</span> url(<span class="hljs-string">"y.css"</span>);</code></pre>
+		<pre class="valid-pattern"><code class="hljs language-css">@<span class="hljs-keyword">import</span> url(<span class="hljs-string">"x.css"</span>);
+@<span class="hljs-keyword">import</span> url(<span class="hljs-string">"y.css"</span>);</code></pre>
+	</section>
+
+
+
+
+
+	<section class="slide little">
+	<style type="text/css">
+	</style>
+
+		<h2>block-closing-brace-empty-line-before</h2>
+		<p>Запрещает писать пустую строку перед закрывающейся скобкой </p>
+
+		<pre class="invalid-pattern"><code class="hljs language-css"><span class="hljs-selector-tag">a</span> {
+  <span class="hljs-attribute">color</span>: pink;
+
+}</code></pre>
+<pre class="valid-pattern"><code class="hljs language-css"><span class="hljs-selector-tag">a</span> {
+  <span class="hljs-attribute">color</span>: pink;
+}</code></pre>
+	</section>
+
+
+
+
+	<section class="slide">
+
+		<h2>block-closing-brace-newline-after</h2>
+		<p>Всегда должен быть перход на новую строку, после закрывающейся скобки</p>
+
+		<pre class="invalid-pattern"><code class="hljs language-css"><span class="hljs-selector-tag">a</span> { <span class="hljs-attribute">color</span>: pink; }<span class="hljs-selector-tag">b</span> { <span class="hljs-attribute">color</span>: red; }</code></pre>
+
+		<pre class="valid-pattern"><code class="hljs language-css"><span class="hljs-selector-tag">a</span> { <span class="hljs-attribute">color</span>: pink; }
+<span class="hljs-selector-tag">b</span> { <span class="hljs-attribute">color</span>: red; }</code></pre>
+	</section>
+
+
+
+	<section class="slide">
+
+		<h2>block-closing-brace-newline-before</h2>
+		<p>Пробел или перевод на новую линию перед закрывающей скобкой</p>
+
+		<pre class="invalid-pattern"><code class="hljs language-css"><span class="hljs-selector-tag">a</span> {
+<span class="hljs-attribute">color</span>: pink;}</code></pre>
+
+<pre class="valid-pattern"><code class="hljs language-css"><span class="hljs-selector-tag">a</span> { <span class="hljs-attribute">color</span>: pink; }</code></pre>
+	</section>
+
+
+
+
+
+	<section class="slide">
+
+		<h2>block-no-empty</h2>
+		<p>Запрет пустых блоков</p>
+
+		<pre class="invalid-pattern"><code class="hljs language-css"><span class="hljs-selector-tag">a</span> { }</code></pre>
+		<pre class="valid-pattern"><code class="hljs language-css"><span class="hljs-selector-tag">a</span> { <span class="hljs-attribute">color</span>: pink; }</code></pre>
+	</section>
+
+
+
+
+	<section class="slide little"  >
+
+		<h2>block-opening-brace-newline-after</h2>
+		<p>Всегда должен быть перевод строки после открывающей скобки в многострочных блоках</p>
+
+<div style="font-size:13px">		<pre class="invalid-pattern"><code class="hljs language-css"><span class="hljs-selector-tag">a</span>{<span class="hljs-attribute">color</span>: pink;
+}</code></pre>
+
+<pre class="valid-pattern"><code class="hljs language-css"><span class="hljs-selector-tag">a</span> {
+<span class="hljs-attribute">	color</span>: pink;
+}</code></pre>
+</div>
+	</section>
+
+
+
+
+
+	<section class="slide">
+
+		<h2>block-opening-brace-space-after
+
+</h2>
+		<p>Пробел после открывающей скобки</p>
+
+		<pre class="invalid-pattern"><code class="hljs language-css"><span class="hljs-selector-tag">a</span> {<span class="hljs-attribute">color</span>: pink; }</code></pre><pre class="valid-pattern"><code class="hljs language-css"><span class="hljs-selector-tag">a</span> { <span class="hljs-attribute">color</span>: pink; }</code></pre>
+	</section>
+
+
+
+	<section class="slide">
+
+		<h2>block-opening-brace-space-before
+
+</h2>
+		<p>Пробел перед открывающей скобкой</p>
+
+		<pre class="invalid-pattern"><code class="hljs language-css"><span class="hljs-selector-tag">a</span>{ <span class="hljs-attribute">color</span>: pink; }</code></pre><pre class="valid-pattern"><code class="hljs language-css"><span class="hljs-selector-tag">a</span> { <span class="hljs-attribute">color</span>: pink; }</code></pre>
+	</section>
+
+
+	
+		<section class="slide">
+	
+			<h2>color-hex-case</h2>
+			<p></p>
+	
+			<pre class="invalid-pattern"><code class="hljs language-css"><span class="hljs-selector-tag">a</span> { <span class="hljs-attribute">color</span>: <span class="hljs-number">#FFF</span>; }</code></pre><pre class="valid-pattern"><code class="hljs language-css"><span class="hljs-selector-tag">a</span> { <span class="hljs-attribute">color</span>: <span class="hljs-number">#fff</span>; }</code></pre>
+		</section>
+	
+	
+	
+	
+		<section class="slide little">
+	
+			<h2>color-hex-length
+
+</h2>
+			<p></p>
+	
+			<pre class="invalid-pattern"><code class="hljs language-css"><span class="hljs-selector-tag">a</span> { <span class="hljs-attribute">color</span>: <span class="hljs-number">#fffffaa</span>; }</code></pre>
+			<pre class="valid-pattern"><code class="hljs language-css"><span class="hljs-selector-tag">a</span> { <span class="hljs-attribute">color</span>: <span class="hljs-number">#fffa</span>; }</code></pre><pre class="valid-pattern"><code class="hljs language-css"><span class="hljs-selector-tag">a</span> { <span class="hljs-attribute">color</span>: <span class="hljs-number">#a4a4a4</span>; }</code></pre>
+			<pre class="valid-pattern"><code class="hljs language-css"><span class="hljs-selector-tag">a</span> { <span class="hljs-attribute">color</span>: <span class="hljs-number">#fff</span>; }</code></pre>
+		</section>
+	
+	
+	
+		<section class="slide">
+	
+			<h2>color-no-invalid-hex
+
+</h2>
+			<p></p>
+	
+			<pre class="invalid-pattern"><code class="hljs language-css"><span class="hljs-selector-tag">a</span> { <span class="hljs-attribute">color</span>: <span class="hljs-number">#00</span>; }</code></pre><pre class="valid-pattern"><code class="hljs language-css"><span class="hljs-selector-tag">a</span> { <span class="hljs-attribute">color</span>: <span class="hljs-number">#000</span>; }</code></pre>
+		</section>
+	
+		
+		
+			<section class="slide little">
+		
+				<h2>comment-empty-line-before
+
+</h2>
+				<p>Пустая строка над комментарием</p>
+		
+				<pre class="invalid-pattern"><code class="hljs language-css"><span class="hljs-selector-tag">a</span> {}
+<span class="hljs-comment">/* comment */</span></code></pre>
+<pre class="valid-pattern"><code class="hljs language-css"><span class="hljs-selector-tag">p {}
+</span>
+<span class="hljs-comment">/* comment */</span>
+<span class="hljs-selector-tag">a {}</span> 
+</code>
+</pre>
+			</section>
+		
+			this
+		
+		
+	
+	
+	
+	
+
+
+
+
+
 
 
 
@@ -203,6 +389,12 @@
 				width:0.72em;
 				height:0.72em;
 				}
+			.little  pre {
+				font-size: 15px;
+			}
+			.micro {
+				font-size: 13px;
+			}
 		</style>
 	</section>
 	<p class="badge">
