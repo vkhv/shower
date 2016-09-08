@@ -6,33 +6,85 @@
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen-16x10.css">
+    <style>
+        
+        .invalid-pattern {
+            padding: 20px;
+            background: #fee;
+            border-radius: 10px
+            
+        }
+        .valid-pattern {
+            padding: 20px;
+            background: #eef7ee;
+            border-radius: 10px
+        }
+
+    </style>
+    
 </head>
-<body class="shower list">
+<body class="shower list _22FV6">
 	<header class="caption">
-		<h1>style reules</h1>
-        <p>with stylelint.com <p>
+		<h1>Shower Presentation Engine</h1>
+		<p>Yours Truly, Famous Inc.</p>
 	</header>
-	<section class="slide" id="cover">
-		<h2>Shower Presentation Engine</h2>
-		<p>Brought to you by <a href="http://pepelsbey.net">Vadim Makeev</a></p>
-		<!--<img src="pictures/cover.jpg" alt="" class="cover">-->
-		<!--
-			To apply styles to the certain slides
-			set slide ID to get needed elements
-			-->
-	</section>
 	<section class="slide">
-		<h2>Shower key features</h2>
-		<ol>
-			<li>Built on HTML, CSS and vanilla JavaScript</li>
-			<li>Works in all modern browsers</li>
-			<li>Themes are separated from engine</li>
-			<li>Modular and extensible</li>
-			<li>Fully keyboard accessible</li>
-			<li>Printable to PDF</li>
-		</ol>
-		<p class="note">Shower ['ʃəuə] noun. A person or thing that shows.</p>
+		<h2>at-rule-empty-line-before</h2>
+		<p>Требует пустую строку перед правилом</p>
+
+
+<pre class="invalid-pattern"><code class="hljs language-css"><span class="hljs-selector-tag">a</span> {}
+@<span class="hljs-keyword">media</span> {}</code></pre>
+
+        <pre class="valid-pattern"><code class="hljs language-css"><span class="hljs-selector-tag">a</span> {}
+
+@<span class="hljs-keyword">media</span> {}</code></pre>
 	</section>
+
+
+
+	<section class="slide">
+		<h2>at-rule-name-case</h2>
+		<p>Правила, начинающиеся с '@' писать в нижнем регистре</p>
+
+
+<pre class="valid-pattern"><code class="hljs language-css">@<span class="hljs-keyword">media</span> (min-width: <span class="hljs-number">50em</span>) {}</code></pre>
+
+<pre class="invalid-pattern"><code class="hljs language-css">@<span class="hljs-keyword">MEDIA</span> (min-width: <span class="hljs-number">50em</span>) {}</code></pre>
+
+	</section>
+
+
+
+	<section class="slide">
+		<h2>at-rule-name-case</h2>
+		<p>Требуется пробел для правил, начинающиеся с '@'</p>
+		<pre class="invalid-pattern"><code class="hljs language-css">@<span class="hljs-keyword">charset</span>"<span class="hljs-keyword">UTF</span>-<span class="hljs-keyword">8</span>";</code></pre>
+
+<pre class="valid-pattern"><code class="hljs language-css">@<span class="hljs-keyword">charset</span> <span class="hljs-string">"UTF-8"</span>;</code></pre>
+
+
+
+
+	</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	<section class="slide">
 		<h2>Plain text on your slides</h2>
 		<p>Lorem ipsum dolor sit amet, consectetur <a href="#4">adipisicing</a> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <em>quis nostrud</em> exercitation ullamco laboris <strong>nisi ut aliquip</strong> ex ea commodo consequat. Duis aute irure <i>dolor</i> in reprehenderit in voluptate velit esse cillum <b>dolore</b> eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in <code>&lt;culpa&gt;</code> qui officia deserunt mollit anim id est laborum.</p>
