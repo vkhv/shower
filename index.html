@@ -445,13 +445,140 @@
             </section>
 
 
+            
+            <section class="slide ">
+
+                <h2>selector-attribute-brackets-space-inside</h2>
+
+                <p>Запретить пробелы в квадратных скобках селекторов атрибутов</p>
+                <pre class="invalid-pattern"><code class="hljs language-css"><span class="hljs-selector-attr">[target ]</span> {}</code></pre>
+                <pre class="valid-pattern"><code class="hljs language-css"><span class="hljs-selector-attr">[target=_blank]</span> {}</code></pre>
+            </section>
+
+
+            <section class="slide ">
+
+                <h2>selector-attribute-operator-space-after</h2>
+
+                <p>Добавлять пробелы для комбинированых селекторов</p>
+                <pre class="invalid-pattern"><code class="hljs language-css"><span class="hljs-selector-tag">a</span>&gt;<span class="hljs-selector-tag">b</span> { <span class="hljs-attribute">color</span>: pink;  }</code></pre>
+                <pre class="valid-pattern"><code class="hljs language-css"><span class="hljs-selector-tag">a</span> + <span class="hljs-selector-tag">b</span> { <span class="hljs-attribute">color</span>: pink;  }</code></pre>
+            </section>
+
+            
+            <section class="slide micro">
+
+                <h2>selector-max-empty-lines</h2>
+
+                <p>Запрет использования пустых строк в селекторах</p>
+                
+<pre class="invalid-pattern"><code class="hljs language-css"><span class="hljs-selector-tag">a</span>
+
+<span class="hljs-selector-tag">b</span> {
+  <span class="hljs-attribute">color</span>: red;
+}</code></pre>
+
+<pre class="valid-pattern"><code class="hljs language-css"><span class="hljs-selector-tag">a</span>
+<span class="hljs-selector-tag">b</span> {
+  <span class="hljs-attribute">color</span>: red;
+}</code></pre>
+            </section>
+
+            
+            <section class="slide ">
+
+                <h2>selector-pseudo-class-case</h2>
+
+                <p>Псевдо-селекторы в нижнем регистре</p>
+                <pre class="invalid-pattern"><code class="hljs language-css"><span class="hljs-selector-tag">a</span><span class="hljs-selector-pseudo">:hOvEr</span> {}</code></pre>
+                <pre class="valid-pattern"><code class="hljs language-css"><span class="hljs-selector-tag">a</span><span class="hljs-selector-pseudo">:hover</span> {}</code></pre>
+            </section>
+
+            <section class="slide ">
+
+                <h2>selector-pseudo-class-no-unknown</h2>
+
+                <p>Запретить неизвестные песвдо классы</p>
+                <pre class="invalid-pattern"><code class="hljs language-css"><span class="hljs-selector-tag">a</span><span class="hljs-selector-pseudo">:hoverr</span> {}</code></pre>
+<pre class="valid-pattern"><code class="hljs language-css"><span class="hljs-selector-tag">a</span><span class="hljs-selector-pseudo">:hover</span> {}</code></pre>
+            </section>
+
+
+            <section class="slide ">
+
+                <h2>selector-pseudo-class-parentheses-space-inside</h2>
+
+                <p>Запрещает пробелы внутри скобок для псевдо-селекторов</p>
+                <pre class="invalid-pattern"><code class="hljs language-css"><span class="hljs-selector-tag">input</span><span class="hljs-selector-pseudo">:not(</span> <span class="hljs-selector-attr">[type="submit"]</span>) {}</code></pre>
+                <pre class="valid-pattern"><code class="hljs language-css"><span class="hljs-selector-tag">input</span><span class="hljs-selector-pseudo">:not(</span><span class="hljs-selector-attr">[type="submit"]</span>) {}</code></pre>
+            </section>
+
+
+            <section class="slide ">
+
+                <h2>selector-pseudo-element-colon-notation</h2>
+
+                <p>Двойная нотация для псевдо-элементов</p>
+                <pre class="invalid-pattern"><code class="hljs language-css"><span class="hljs-selector-tag">a</span><span class="hljs-selector-pseudo">:before</span> { <span class="hljs-attribute">color</span>: pink;  }</code></pre>
+                <pre class="valid-pattern"><code class="hljs language-css"><span class="hljs-selector-tag">a</span><span class="hljs-selector-pseudo">::before</span> { <span class="hljs-attribute">color</span>: pink;  }</code></pre>
+            </section>
+
+            
+            <section class="slide ">
+
+                <h2>selector-type-case</h2>
+
+                <p>Селекторы в нижнем регистре</p>
+                <pre class="invalid-pattern"><code class="hljs language-css"><span class="hljs-selector-tag">A</span> {}</code></pre>
+                <pre class="valid-pattern"><code class="hljs language-css"><span class="hljs-selector-tag">a</span> {}</code></pre>
+            </section>
+
+
+            
+            <section class="slide ">
+
+                <h2>selector-type-no-unknown</h2>
+
+                <p>Запрет на неизвестные селеторы (HTML и SVG спецификации)</p>
+                <pre class="invalid-pattern"><code class="hljs language-css"><span class="hljs-selector-tag">tag</span> {}</code></pre>
+                <pre class="valid-pattern"><code class="hljs language-css"><span class="hljs-selector-tag">input</span> {}</code></pre>
+            </section>
 
 
 
+        
+            <section class="slide little">
 
-	<p class="badge">
-		<a href="https://github.com/shower/shower">Fork me on GitHub</a>
-	</p>
+                <h2>unit-case</h2>
+
+                <p>Нижний регистр для едениц</p>
+                <pre class="invalid-pattern"><code class="hljs language-css"><span class="hljs-selector-tag">a</span> {
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">10PX</span>;
+}</code></pre>
+<pre class="valid-pattern"><code class="hljs language-css"><span class="hljs-selector-tag">a</span> {
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">10px</span>;
+}</code></pre>
+            </section>
+
+
+
+            <section class="slide little">
+
+                <h2>unit-no-unknown</h2>
+
+                <p>Запрет неизвестных едениц</p>
+
+                <pre class="invalid-pattern"><code class="hljs language-css"><span class="hljs-selector-tag">a</span> {
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">10</span>pixels;
+}</code></pre>
+
+                <pre class="valid-pattern"><code class="hljs language-css"><span class="hljs-selector-tag">a</span> {
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">10px</span>;
+}  </code></pre> 
+            </section>
+
+
+
 	<!--
 		To hide progress bar from entire presentation
 		just remove “progress” element.
