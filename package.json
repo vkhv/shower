@@ -1,19 +1,11 @@
 {
   "name": "shower",
-  "description": "Shower HTML presentation engine",
+  "description": "Collection of rules for stylelint on rus",
   "version": "2.1.4",
   "author": {
-    "name": "Vadim Makeev",
-    "url": "http://pepelsbey.net/"
+    "name": "Vladislav Khvostov"
   },
-  "homepage": "https://github.com/shower/shower",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/shower/shower.git"
-  },
-  "bugs": {
-    "url": "http://github.com/shower/shower/issues"
-  },
+  "homepage": "https://github.com/vkhv/stylelint-rules",
   "license": "MIT",
   "keywords": [
     "shower",
